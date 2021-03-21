@@ -66,3 +66,15 @@ num_max = 30
   end  
   puts fizzBuzz(num) 
 end
+
+1.upto(30) do |i|
+  if (i % 15).zero? #自身がゼロの時trueを返す
+    puts 'Fizz Buzz'
+  elsif (i % 3).zero?
+    puts 'Fizz'
+  elsif (i % 5).zero?
+    puts 'Buzz'
+  else
+    puts i
+  end
+end
