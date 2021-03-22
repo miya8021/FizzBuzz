@@ -23,3 +23,16 @@ puts (1..100).reduce(&:+) # Rubyのイテレータメソッドinject(reduce)
 sum = 0
 (1..100).each { |i| sum += i }
 puts sum
+
+#プロフィールのデータを検索する
+profiles = [
+  {name: "静岡 太郎", age: 34, address: "静岡県"},
+  {name: "名古屋 次郎", age: 25, address: "愛知県"},
+  {name: "大津 三郎", age: 19, address: "滋賀県"}
+]
+def search(profiles, key, query)
+  profiles.each do |profile|
+    return profile if query =~ profile[key]
+  end
+end
+p search(profiles, :name, /静岡 太郎/)
