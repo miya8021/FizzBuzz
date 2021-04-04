@@ -54,13 +54,30 @@ p line
 
 # 出力結果
 # [["Tokyo", "Osaka", "Kyoto"], ["Japan", "USA", "China"]]
-#簡素化
 
+#簡素化
 lines = []
 while line = gets # 標準入力の値を全て取得するまで繰り返される
   lines << line.chomp.split(' ')
 end
 p lines
+
 #さらに簡素化
 lines = readlines(chomp: true).map { |line| line.split(' ') }
 p lines
+
+# 標準入力とループ処理
+count = gets.to_i
+for i in 1..count
+  line = gets
+  puts line
+end
+
+# 取得対象のデータ数(行数)を表す整数
+num = gets.to_i
+# 2行目以降に取得対象のデータを変数arrayに配列として取り組む場合
+array = []
+while s = gets
+  array << s.sub(/\R/,"")
+end
+p array
