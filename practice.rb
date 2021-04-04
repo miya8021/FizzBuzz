@@ -36,3 +36,31 @@ def search(profiles, key, query)
   end
 end
 p search(profiles, :name, /静岡 太郎/)
+
+#複数行に複数要素が存在する場合の受け取り方
+# 標準入力
+# Tokyo Osaka Kyoto
+# Japan USA China
+
+line = readlines # 複数行を「配列」としてよみとる
+len = line.length #配列の要素数を調べる
+
+i = 0 #変数iに0を代入
+while i < len #条件式。変数iは、lenより小さいのでくり返しを実行
+    line[i] = line[i].chomp.split(' ')
+    i += 1
+end
+p line
+
+# 出力結果
+# [["Tokyo", "Osaka", "Kyoto"], ["Japan", "USA", "China"]]
+#簡素化
+
+lines = []
+while line = gets # 標準入力の値を全て取得するまで繰り返される
+  lines << line.chomp.split(' ')
+end
+p lines
+#さらに簡素化
+lines = readlines(chomp: true).map { |line| line.split(' ') }
+p lines
