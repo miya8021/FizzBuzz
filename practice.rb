@@ -81,3 +81,21 @@ while s = gets
   array << s.sub(/\R/,"")
 end
 p array
+
+# 標準入力
+# 1 2 3
+# 2 3 4 5 6
+# 3 4 5 6 7
+# 1行目
+p gets.split.map(&:to_i)
+
+# 2行目以降読み込み
+array_of_input = []
+while s = gets
+  array_of_input.push(s.split.map(&:to_i))
+end
+p array_of_input
+
+#出力結果
+# [1, 2, 3]
+# [[2, 3, 4, 5, 6], [3, 4, 5, 6, 7]]
