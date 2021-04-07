@@ -37,6 +37,16 @@ def search(profiles, key, query)
 end
 p search(profiles, :name, /静岡 太郎/)
 
+# 一行に複数要素存在する場合
+# 標準入力
+# Tokyo Osaka Kyoto
+
+line = gets.split(' ')
+p line
+
+# 出力結果
+# ["Tokyo", "Osaka", "Kyoto"]
+
 #複数行に複数要素が存在する場合の受け取り方
 # 標準入力
 # Tokyo Osaka Kyoto
@@ -99,3 +109,4 @@ p array_of_input
 #出力結果
 # [1, 2, 3]
 # [[2, 3, 4, 5, 6], [3, 4, 5, 6, 7]]
+
