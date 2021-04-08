@@ -110,3 +110,22 @@ p array_of_input
 # [1, 2, 3]
 # [[2, 3, 4, 5, 6], [3, 4, 5, 6, 7]]
 
+# 入力例
+# 3
+# Tanaka 18
+# Sato 50
+# Suzuki 120
+n = gets.to_i
+
+for i in 1..n
+    s_a = gets.split(' ')
+    s = s_a[0]
+    a = s_a.map(&:to_i)#文字列を整数へ変換
+    a_1 = a[1]
+    puts "#{s} #{(a_1+1)}"
+end
+
+# 出力例
+# Tanaka 19
+# Sato 51
+# Suzuki 121
