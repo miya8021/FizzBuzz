@@ -5,16 +5,6 @@ puts m.remainder(n)
 # remainderメソッドにおける余りを求める計算において、割る数の符号は、計算結果には関係ない
 # 3
 
-# 以下の出力結果を得られるプログラム
-# foo
-# bar
-# baz
-
-puts "foo\nbar\nbaz\n" #\nで改行する
-
-a = %w[foo bar baz]
-puts a.join("\n") #配列を作成し、joinで改行を入力する
-
 # 1から100までの数値を合計する
 i = 1
 sum = 0
