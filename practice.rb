@@ -96,6 +96,22 @@ p lines
 lines = readlines(chomp: true).map { |line| line.split(' ') }
 p lines
 
+# 複数行に複数要素が存在する場合の受け取り方(数値)
+# 標準入力
+# 1 2 3
+# 4 5 6
+
+lines = []
+while line = gets
+    lines << line.chomp.split(' ').map(&:to_i)
+end
+p lines
+# 出力結果
+# [[1, 2, 3], [4, 5, 6]]
+
+
+
+
 # 標準入力とループ処理
 count = gets.to_i
 for i in 1..count
